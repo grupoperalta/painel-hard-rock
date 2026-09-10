@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; font-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<title>Hard Rock Cafe Praia Grande · Controladoria Grupo Peralta</title>
+<link rel="icon" href="img/hrc-petroleo.png">
+<style>
+  [hidden]{display:none!important}
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:#F4F3EE;color:#09212C;font:15px/1.5 "Segoe UI","Vinila Variable",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  #trava{min-height:100vh;display:grid;place-items:center;padding:24px}
+  #trava .cartao{width:100%;max-width:420px;background:#fff;border:1px solid #E1E0D7;border-radius:20px;overflow:hidden;
+    box-shadow:0 1px 2px rgba(9,33,44,.05),0 4px 12px -8px rgba(9,33,44,.16)}
+  #trava .topo{background:#09212C;padding:26px 32px 22px;display:flex;flex-direction:column;align-items:center;gap:10px;border-bottom:3px solid #EABA60}
+  #trava .topo img{height:96px;width:auto}
+  #trava .topo .sub{color:#CAE8F5;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;text-align:center}
+  #trava .corpo{padding:26px 32px 30px}
+  #trava label{display:block;font-size:12px;font-weight:700;color:#3D4A52;margin:0 0 6px;letter-spacing:.03em}
+  #trava input{width:100%;padding:12px 13px;border:1px solid #E1E0D7;border-radius:10px;background:#fff;font:inherit;color:#09212C;margin-bottom:16px}
+  #trava input:focus{outline:none;border-color:#2A78A7;box-shadow:0 0 0 3px rgba(42,120,167,.15)}
+  #trava button{width:100%;background:#09212C;color:#fff;border:0;padding:13px;border-radius:11px;font:inherit;font-weight:700;cursor:pointer;letter-spacing:.03em}
+  #trava button:hover{background:#2A78A7}
+  #trava button:disabled{opacity:.6;cursor:progress}
+  #trava .erro{color:#D63D26;font-size:13px;font-weight:600;min-height:20px;margin-top:12px}
+  #trava .nota{margin-top:16px;font-size:11px;color:#898780;text-align:center;line-height:1.6}
+  #trava .selo{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;font-size:11px;color:#898780;letter-spacing:.1em;text-transform:uppercase}
+  #trava .selo img{height:26px;width:auto}
+</style>
+</head>
+<body>
+<main id="trava">
+  <form class="cartao" id="form-senha" autocomplete="off">
+    <div class="topo">
+      <img src="img/hrc-branco.png" alt="Hard Rock Cafe Praia Grande">
+      <div class="sub">Controladoria · Grupo Peralta · acesso restrito</div>
+    </div>
+    <div class="corpo">
+      <label for="senha">Senha do painel</label>
+      <input id="senha" type="password" autocomplete="off" autofocus required>
+      <button id="entrar" type="submit">Entrar</button>
+      <div class="erro" id="erro" role="alert"></div>
+      <noscript><div class="erro">É preciso JavaScript ligado para decifrar o painel.</div></noscript>
+      <div class="nota">Conteúdo cifrado (AES-256). Os dados são decifrados só neste navegador; nada é enviado a servidor. Não compartilhe a senha por canal público.</div>
+      <div class="selo"><img src="img/peralta.png" alt="Grupo Peralta"> desde 1966</div>
+    </div>
+  </form>
+</main>
+<div id="app" hidden></div>
+<script src="dados.js?v=7fcca791cb96" defer></script>
+<script src="painel.js?v=c094161b3d33" defer></script>
+</body>
+</html>
